@@ -50,8 +50,8 @@ def detect_tampering(raw_metadata: dict) -> dict:
     has_exif_fields = len([k for k in raw_metadata.keys() if k.startswith("EXIF:")])
 
     if not has_camera_info and has_exif_fields < 3:
-        findings.append("Metadata appears stripped or minimal — common in AI-generated or re-exported images")
-        score = max(score, 0.6)
+        findings.append("No camera metadata present — inconclusive (common in social media downloads, screenshots, and AI exports alike)")
+        score = max(score, 0.5)
 
     return {
         "software_detected": software if software else None,
