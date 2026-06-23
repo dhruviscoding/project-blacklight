@@ -10,6 +10,8 @@ from analyzers.ai_detection.noise_analyzer import analyze_noise
 from analyzers.ai_detection.image_classifier import analyze_cnn
 from analyzers.ai_detection.modern_classifier import analyze_modern_cnn
 from engines.verdict_engine import run_verdict_engine
+from analyzers.ai_detection.ocr_analyzer import analyze_ocr
+from analyzers.ai_detection.face_analyzer import analyze_face
 import os
 
 router = APIRouter()
@@ -78,6 +80,16 @@ async def analyze_image(file: UploadFile = File(...)):
     except Exception as e:
         results["vit"] = {"name": "Modern AI Classifier", "score": None, "finding": f"Failed: {e}"}
 
+    try:
+        results["ocr"] = analyze_ocr(temp_path)
+    except Exception as e:
+        results["ocr"] = {"name": "OCR Text Analysis", "score": None, "finding": f"Failed: {e}"}
+
+    try:
+        results["face"] = analyze_face(temp_path)
+    except Exception as e:
+        results["face"] = {"name": "Face Landmark Analysis", "score": None, "finding": f"Failed: {e}"}
+    
     # Reverse search links — stub until Supabase storage gives us public URLs
     results["reverse_search"] = generate_reverse_search_links(
         f"https://placeholder.blacklight.app/temp/{file.filename}"
@@ -91,7 +103,9 @@ async def analyze_image(file: UploadFile = File(...)):
         "fft": results["fft"],
         "noise": results["noise"],
         "metadata": results["metadata"],
-        "ela": results["ela"]
+        "ela": results["ela"],
+        "ocr": results["ocr"],
+        "face": results["face"]
     })
 
     return {
@@ -107,7 +121,9 @@ async def analyze_image(file: UploadFile = File(...)):
             "fft": results["fft"],
             "noise": results["noise"],
             "cnn": results["cnn"],
-            "vit": results["vit"]
+            "vit": results["vit"],
+            "ocr": results["ocr"],
+            "face": results["face"]
         },
         "reverse_search": results["reverse_search"]
     }

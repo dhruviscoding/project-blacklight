@@ -27,7 +27,9 @@ def run_verdict_engine(signals: dict) -> dict:
     noise = signals.get("noise")
     metadata = signals.get("metadata")
     ela = signals.get("ela")
- 
+    ocr = signals.get("ocr")
+    face = signals.get("face")
+
     all_signals = {
         "C2PA Verification": c2pa,
         "CNN Classifier": cnn,
@@ -35,7 +37,9 @@ def run_verdict_engine(signals: dict) -> dict:
         "FFT Frequency Analysis": fft,
         "Noise Analysis": noise,
         "Metadata Analysis": metadata,
-        "Error Level Analysis": ela
+        "Error Level Analysis": ela,
+        "OCR Text Analysis": ocr,
+        "Face Landmark Analysis": face
     }
  
     # ----------------------------------------------------------------
@@ -98,12 +102,23 @@ def run_verdict_engine(signals: dict) -> dict:
     metadata_score = metadata["score"] if metadata and metadata["score"] is not None else None
     ela_score = ela["score"] if ela and ela["score"] is not None else None
  
+    ocr_score = ocr["score"] if ocr and ocr["score"] is not None else None
+    face_score = face["score"] if face and face["score"] is not None else None
+
+    # Semantic signals (OCR, face) are neutral at 0.5 — only contribute when
+    # they find something meaningful (garbled text, facial anomalies)
+    # Don't include neutral 0.5 scores in weighted average — too noisy
+    ocr_weighted = ocr_score if ocr_score is not None and ocr_score != 0.5 else None
+    face_weighted = face_score if face_score is not None and face_score != 0.5 else None
+
     base_weights = {
-        "ml": (combined_ml, 0.40),
-        "noise": (noise_score, 0.30),
-        "fft": (fft_score, 0.15),
+        "ml": (combined_ml, 0.38),
+        "noise": (noise_score, 0.28),
+        "fft": (fft_score, 0.14),
         "metadata": (metadata_score, 0.10),
         "ela": (ela_score, 0.05),
+        "ocr": (ocr_weighted, 0.03),
+        "face": (face_weighted, 0.02),
     }
  
     # Filter out None scores, redistribute weights proportionally
@@ -124,20 +139,31 @@ def run_verdict_engine(signals: dict) -> dict:
  
     statistical_scores = [s for s in [fft_score, noise_score, ela_score] if s is not None]
     statistical_category = sum(statistical_scores) / len(statistical_scores) if statistical_scores else None
+
+    # Semantic signals only contribute to category scoring when non-neutral
+    semantic_scores = [s for s in [ocr_score, face_score] if s is not None and s != 0.5]
+    semantic_category = sum(semantic_scores) / len(semantic_scores) if semantic_scores else None
  
     provenance_category = metadata_score
  
-    category_scores = [s for s in [ml_category, statistical_category, provenance_category] if s is not None]
- 
+    category_scores = [s for s in [ml_category, statistical_category, provenance_category, semantic_category] if s is not None]
+
     conflict_detected = False
     coherence_bonus = 0.0
- 
+
     if len(category_scores) >= 2:
-        max_cat = max(category_scores)
-        min_cat = min(category_scores)
-        if max_cat - min_cat > 0.4:
+        mean_cat = sum(category_scores) / len(category_scores)
+        variance = sum((s - mean_cat) ** 2 for s in category_scores) / len(category_scores)
+        std_dev = variance ** 0.5
+
+        # Conflict only when variance is genuinely high — one outlier against
+        # strong consensus should not trigger INCONCLUSIVE.
+        # std_dev > 0.25 means categories are meaningfully spread apart.
+        # Simple max-min was too sensitive to single weak outliers (e.g. ViT
+        # underperforming on StyleGAN while CNN+FFT+Noise strongly agree).
+        if std_dev > 0.25:
             conflict_detected = True
-        elif max_cat - min_cat < 0.15:
+        elif std_dev < 0.08:
             coherence_bonus = 0.05
  
     # ----------------------------------------------------------------
