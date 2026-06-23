@@ -227,8 +227,9 @@ def run_verdict_engine(signals: dict) -> dict:
         risk = "CRITICAL"
  
     top_signal = max(normalized.items(), key=lambda x: x[1][0] * x[1][1])
+    total_categories = 5  # ml, noise/fft/ela (statistical), metadata (provenance), ocr/face (semantic), c2pa
     summary = (
-        f"{coverage} of 5 signal categories available. "
+        f"{coverage} of {total_categories} signal categories available. "
         f"Weighted confidence: {confidence:.0%}. "
         f"Strongest contributing signal: {top_signal[0].upper()} "
         f"(score: {top_signal[1][0]:.2f}, weight: {top_signal[1][1]:.0%}). "

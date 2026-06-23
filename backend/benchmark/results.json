@@ -1,0 +1,1205 @@
+{
+  "ai": [
+    {
+      "file": "10.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6744,
+      "correct": true
+    },
+    {
+      "file": "100.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5291,
+      "correct": true
+    },
+    {
+      "file": "11.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.276,
+      "correct": false
+    },
+    {
+      "file": "12.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.639,
+      "correct": true
+    },
+    {
+      "file": "13.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6629,
+      "correct": true
+    },
+    {
+      "file": "14.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.3933,
+      "correct": true
+    },
+    {
+      "file": "15.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5121,
+      "correct": true
+    },
+    {
+      "file": "16.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5607,
+      "correct": true
+    },
+    {
+      "file": "17.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4581,
+      "correct": true
+    },
+    {
+      "file": "18.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5145,
+      "correct": true
+    },
+    {
+      "file": "19.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6016,
+      "correct": true
+    },
+    {
+      "file": "20.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5489,
+      "correct": true
+    },
+    {
+      "file": "21.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6401,
+      "correct": true
+    },
+    {
+      "file": "22.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5578,
+      "correct": true
+    },
+    {
+      "file": "23.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2911,
+      "correct": false
+    },
+    {
+      "file": "24.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.612,
+      "correct": true
+    },
+    {
+      "file": "25.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6152,
+      "correct": true
+    },
+    {
+      "file": "26.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5993,
+      "correct": true
+    },
+    {
+      "file": "27.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5391,
+      "correct": true
+    },
+    {
+      "file": "28.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6678,
+      "correct": true
+    },
+    {
+      "file": "29.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5443,
+      "correct": true
+    },
+    {
+      "file": "30.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5529,
+      "correct": true
+    },
+    {
+      "file": "31.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2967,
+      "correct": false
+    },
+    {
+      "file": "32.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5371,
+      "correct": true
+    },
+    {
+      "file": "33.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5376,
+      "correct": true
+    },
+    {
+      "file": "34.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4105,
+      "correct": true
+    },
+    {
+      "file": "35.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5414,
+      "correct": true
+    },
+    {
+      "file": "36.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6228,
+      "correct": true
+    },
+    {
+      "file": "37.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6257,
+      "correct": true
+    },
+    {
+      "file": "38.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6676,
+      "correct": true
+    },
+    {
+      "file": "39.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2636,
+      "correct": false
+    },
+    {
+      "file": "40.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6082,
+      "correct": true
+    },
+    {
+      "file": "41.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6446,
+      "correct": true
+    },
+    {
+      "file": "42.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5318,
+      "correct": true
+    },
+    {
+      "file": "43.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5362,
+      "correct": true
+    },
+    {
+      "file": "44.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.508,
+      "correct": true
+    },
+    {
+      "file": "45.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2677,
+      "correct": false
+    },
+    {
+      "file": "46.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6034,
+      "correct": true
+    },
+    {
+      "file": "47.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5856,
+      "correct": true
+    },
+    {
+      "file": "48.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6279,
+      "correct": true
+    },
+    {
+      "file": "49.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6466,
+      "correct": true
+    },
+    {
+      "file": "50.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5721,
+      "correct": true
+    },
+    {
+      "file": "51.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5069,
+      "correct": true
+    },
+    {
+      "file": "52.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4973,
+      "correct": true
+    },
+    {
+      "file": "53.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5531,
+      "correct": true
+    },
+    {
+      "file": "54.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5399,
+      "correct": true
+    },
+    {
+      "file": "55.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6118,
+      "correct": true
+    },
+    {
+      "file": "56.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5693,
+      "correct": true
+    },
+    {
+      "file": "57.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2354,
+      "correct": false
+    },
+    {
+      "file": "58.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6163,
+      "correct": true
+    },
+    {
+      "file": "59.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5957,
+      "correct": true
+    },
+    {
+      "file": "6.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2699,
+      "correct": false
+    },
+    {
+      "file": "60.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5229,
+      "correct": true
+    },
+    {
+      "file": "62.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6095,
+      "correct": true
+    },
+    {
+      "file": "63.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6547,
+      "correct": true
+    },
+    {
+      "file": "64.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6684,
+      "correct": true
+    },
+    {
+      "file": "65.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5301,
+      "correct": true
+    },
+    {
+      "file": "66.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6335,
+      "correct": true
+    },
+    {
+      "file": "67.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5375,
+      "correct": true
+    },
+    {
+      "file": "68.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.522,
+      "correct": true
+    },
+    {
+      "file": "69.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6116,
+      "correct": true
+    },
+    {
+      "file": "7.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5874,
+      "correct": true
+    },
+    {
+      "file": "70.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6322,
+      "correct": true
+    },
+    {
+      "file": "71.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.3733,
+      "correct": true
+    },
+    {
+      "file": "72.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4851,
+      "correct": true
+    },
+    {
+      "file": "73.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4723,
+      "correct": true
+    },
+    {
+      "file": "74.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2903,
+      "correct": false
+    },
+    {
+      "file": "75.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6208,
+      "correct": true
+    },
+    {
+      "file": "76.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.517,
+      "correct": true
+    },
+    {
+      "file": "77.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5407,
+      "correct": true
+    },
+    {
+      "file": "78.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5776,
+      "correct": true
+    },
+    {
+      "file": "79.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6416,
+      "correct": true
+    },
+    {
+      "file": "8.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5546,
+      "correct": true
+    },
+    {
+      "file": "80.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5928,
+      "correct": true
+    },
+    {
+      "file": "81.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4637,
+      "correct": true
+    },
+    {
+      "file": "82.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4831,
+      "correct": true
+    },
+    {
+      "file": "83.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6162,
+      "correct": true
+    },
+    {
+      "file": "84.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5895,
+      "correct": true
+    },
+    {
+      "file": "85.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5148,
+      "correct": true
+    },
+    {
+      "file": "86.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.3011,
+      "correct": false
+    },
+    {
+      "file": "87.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6608,
+      "correct": true
+    },
+    {
+      "file": "88.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5517,
+      "correct": true
+    },
+    {
+      "file": "89.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5764,
+      "correct": true
+    },
+    {
+      "file": "9.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5427,
+      "correct": true
+    },
+    {
+      "file": "90.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.525,
+      "correct": true
+    },
+    {
+      "file": "91.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6579,
+      "correct": true
+    },
+    {
+      "file": "92.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5367,
+      "correct": true
+    },
+    {
+      "file": "93.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5196,
+      "correct": true
+    },
+    {
+      "file": "94.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6754,
+      "correct": true
+    },
+    {
+      "file": "95.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4656,
+      "correct": true
+    },
+    {
+      "file": "96.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5928,
+      "correct": true
+    },
+    {
+      "file": "97.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6826,
+      "correct": true
+    },
+    {
+      "file": "98.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5467,
+      "correct": true
+    },
+    {
+      "file": "99.jpg",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2925,
+      "correct": false
+    },
+    {
+      "file": "lexica1.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6313,
+      "correct": true
+    },
+    {
+      "file": "lexica2.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.538,
+      "correct": true
+    },
+    {
+      "file": "lexica3.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6751,
+      "correct": true
+    },
+    {
+      "file": "lexica4.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5367,
+      "correct": true
+    },
+    {
+      "file": "lexica5.jpg",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5318,
+      "correct": true
+    },
+    {
+      "file": "lexica6.jpg",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6313,
+      "correct": true
+    }
+  ],
+  "real": [
+    {
+      "file": "AABZ7883.JPG",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.6435,
+      "correct": false
+    },
+    {
+      "file": "AFTC2570.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5633,
+      "correct": true
+    },
+    {
+      "file": "BHTB1477.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "BXVE9641.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5710381052631579,
+      "correct": true
+    },
+    {
+      "file": "COUF7526.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "CYCB9552.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "EOPZ7930.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_0482.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_0837.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_0895.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.3,
+      "correct": true
+    },
+    {
+      "file": "IMG_0955.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4895,
+      "correct": true
+    },
+    {
+      "file": "IMG_1208.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.3405,
+      "correct": true
+    },
+    {
+      "file": "IMG_1235.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5412755789473684,
+      "correct": true
+    },
+    {
+      "file": "IMG_1398.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.560322105263158,
+      "correct": true
+    },
+    {
+      "file": "IMG_1402.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0292,
+      "correct": true
+    },
+    {
+      "file": "IMG_1472.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.540782105263158,
+      "correct": true
+    },
+    {
+      "file": "IMG_1479.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5294,
+      "correct": true
+    },
+    {
+      "file": "IMG_1485.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_1557.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_1590.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_1603.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5876,
+      "correct": true
+    },
+    {
+      "file": "IMG_1750.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.568,
+      "correct": true
+    },
+    {
+      "file": "IMG_2059.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_2073.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_2336.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5676,
+      "correct": true
+    },
+    {
+      "file": "IMG_2429.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_2430.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5711187628865979,
+      "correct": true
+    },
+    {
+      "file": "IMG_2442.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5067,
+      "correct": true
+    },
+    {
+      "file": "IMG_2500.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0667,
+      "correct": true
+    },
+    {
+      "file": "IMG_2505.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_2542.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0292,
+      "correct": true
+    },
+    {
+      "file": "IMG_2685.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_3043.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3065.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3119.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3126.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3173.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5884,
+      "correct": true
+    },
+    {
+      "file": "IMG_3174.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3175.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5899661052631578,
+      "correct": true
+    },
+    {
+      "file": "IMG_3260.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5495,
+      "correct": true
+    },
+    {
+      "file": "IMG_3299.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_3523.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5754,
+      "correct": true
+    },
+    {
+      "file": "IMG_3535.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_3833.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5152,
+      "correct": true
+    },
+    {
+      "file": "IMG_3911.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_3920.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_4186.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_4315.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_4521.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5567,
+      "correct": true
+    },
+    {
+      "file": "IMG_4668.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5781221052631579,
+      "correct": true
+    },
+    {
+      "file": "IMG_4706.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5743,
+      "correct": true
+    },
+    {
+      "file": "IMG_4809.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2594,
+      "correct": true
+    },
+    {
+      "file": "IMG_5751.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_6296.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "file": "IMG_6318.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_6349.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5035,
+      "correct": true
+    },
+    {
+      "file": "IMG_6358.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_6359.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "IMG_6372.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_8528.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_8529.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_8985.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4676,
+      "correct": true
+    },
+    {
+      "file": "IMG_E0448.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5434,
+      "correct": true
+    },
+    {
+      "file": "IMG_E1773.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_E2570.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5,
+      "correct": true
+    },
+    {
+      "file": "JDIQ5520.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "LHWC6675.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2,
+      "correct": true
+    },
+    {
+      "file": "NVXH7230.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "ONWT0922.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5367,
+      "correct": true
+    },
+    {
+      "file": "OWHQ1499.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5073,
+      "correct": true
+    },
+    {
+      "file": "PDHD1840.JPG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "QACL2781.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "QTDC0863.JPG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5803719587628866,
+      "correct": true
+    },
+    {
+      "file": "SEGX0622.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.568,
+      "correct": true
+    },
+    {
+      "file": "YKKJ1453.JPG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4071,
+      "correct": true
+    },
+    {
+      "file": "YLHU2938.JPG",
+      "verdict": "LIKELY AI GENERATED",
+      "confidence": 0.624,
+      "correct": false
+    },
+    {
+      "file": "MDOE1345.JPEG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5403,
+      "correct": true
+    },
+    {
+      "file": "IMG_0694.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5549,
+      "correct": true
+    },
+    {
+      "file": "IMG_0898.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5492,
+      "correct": true
+    },
+    {
+      "file": "IMG_1887.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5999,
+      "correct": true
+    },
+    {
+      "file": "IMG_2056.PNG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5704958762886598,
+      "correct": true
+    },
+    {
+      "file": "IMG_2147.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.0,
+      "correct": true
+    },
+    {
+      "file": "IMG_2571.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5695,
+      "correct": true
+    },
+    {
+      "file": "IMG_3078.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.523,
+      "correct": true
+    },
+    {
+      "file": "IMG_3428.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5378,
+      "correct": true
+    },
+    {
+      "file": "IMG_4680.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4924,
+      "correct": true
+    },
+    {
+      "file": "IMG_6170.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4813,
+      "correct": true
+    },
+    {
+      "file": "IMG_6212.PNG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.6182675789473684,
+      "correct": true
+    },
+    {
+      "file": "IMG_6219.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4827,
+      "correct": true
+    },
+    {
+      "file": "IMG_6222.PNG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.3199,
+      "correct": true
+    },
+    {
+      "file": "IMG_6306.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4884,
+      "correct": true
+    },
+    {
+      "file": "IMG_6310.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.4813,
+      "correct": true
+    },
+    {
+      "file": "IMG_6315.PNG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.2769,
+      "correct": true
+    },
+    {
+      "file": "IMG_6317.PNG",
+      "verdict": "LIKELY AUTHENTIC",
+      "confidence": 0.3199,
+      "correct": true
+    },
+    {
+      "file": "IMG_6340.PNG",
+      "verdict": "INCONCLUSIVE",
+      "confidence": 0.5178,
+      "correct": true
+    },
+    {
+      "file": "IMG_8115.PNG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5596141052631579,
+      "correct": true
+    },
+    {
+      "file": "IMG_9169.PNG",
+      "verdict": "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended",
+      "confidence": 0.5665861052631579,
+      "correct": true
+    }
+  ],
+  "summary": {
+    "ai_accuracy": 0.9,
+    "real_accuracy": 0.979381443298969,
+    "overall_accuracy": 0.9390862944162437,
+    "ai_verdict_distribution": {
+      "LIKELY AI GENERATED": 34,
+      "INCONCLUSIVE": 56,
+      "LIKELY AUTHENTIC": 10
+    },
+    "real_verdict_distribution": {
+      "LIKELY AI GENERATED": 2,
+      "INCONCLUSIVE": 47,
+      "LIKELY AUTHENTIC": 36,
+      "INCONCLUSIVE \u2014 Conflicting signals, manual review recommended": 12
+    },
+    "total_images": 197
+  }
+}
