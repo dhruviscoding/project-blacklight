@@ -1,15 +1,39 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 import VerdictCard from '../components/VerdictCard'
 import SignalBreakdown from '../components/SignalBreakdown'
 import MetadataPanel from '../components/MetadataPanel'
 import HashPanel from '../components/HashPanel'
 import ForensicVisuals from '../components/ForensicVisuals'
- 
+
 function Analysis() {
   const location = useLocation()
   const navigate = useNavigate()
   const { result, file, mediaType } = location.state || {}
- 
+
+  async function downloadReport() {
+    try {
+      const response = await axios.post(
+        'http://127.0.0.1:8000/report/generate',
+        {
+          analysis_result: result,
+          filename: file,
+          media_type: mediaType
+        },
+        { responseType: 'blob' }
+      )
+      const url = window.URL.createObjectURL(new Blob([response.data]))
+      const link = document.createElement('a')
+      link.href = url
+      link.setAttribute('download', `blacklight_report_${file}.pdf`)
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+    } catch (err) {
+      alert('Report generation failed. Make sure the backend is running.')
+    }
+  }
+
   if (!result) {
     return (
       <div style={{ minHeight: "100vh", backgroundColor: "#FAFAF8", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -35,32 +59,49 @@ function Analysis() {
       </div>
     )
   }
- 
+
   const signals = result.signals || {}
- 
+
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#FAFAF8" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto", padding: "48px 24px 80px" }}>
- 
+
         <div style={{ marginBottom: "32px" }}>
-          <button
-            onClick={() => navigate("/")}
-            style={{
-              background: "none",
-              border: "none",
-              color: "#6B6563",
-              fontSize: "13px",
-              cursor: "pointer",
-              fontFamily: "Inter, sans-serif",
-              padding: "0",
-              marginBottom: "16px",
-              display: "flex",
-              alignItems: "center",
-              gap: "4px"
-            }}
-          >
-            ← New Analysis
-          </button>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+            <button
+              onClick={() => navigate("/")}
+              style={{
+                background: "none",
+                border: "none",
+                color: "#6B6563",
+                fontSize: "13px",
+                cursor: "pointer",
+                fontFamily: "Inter, sans-serif",
+                padding: "0",
+                display: "flex",
+                alignItems: "center",
+                gap: "4px"
+              }}
+            >
+              ← New Analysis
+            </button>
+            <button
+              onClick={downloadReport}
+              style={{
+                padding: "8px 16px",
+                backgroundColor: "#D97757",
+                color: "#FFFFFF",
+                border: "none",
+                borderRadius: "8px",
+                fontFamily: "Inter, sans-serif",
+                fontSize: "13px",
+                fontWeight: 600,
+                cursor: "pointer"
+              }}
+            >
+              Download Report
+            </button>
+          </div>
           <h1 style={{ fontSize: "24px", fontWeight: 700, color: "#1A1A1A", letterSpacing: "-0.3px" }}>
             Analysis Report
           </h1>
@@ -68,21 +109,21 @@ function Analysis() {
             {file} · {mediaType}
           </p>
         </div>
- 
+
         <VerdictCard verdict={result.verdict} />
- 
+
         <SignalBreakdown signals={signals} />
- 
+
         <ForensicVisuals
           ela={signals.ela}
           fft={signals.fft}
           noise={signals.noise}
         />
- 
+
         <MetadataPanel metadata={signals.metadata} />
- 
+
         <HashPanel hashes={signals.hashes} />
- 
+
         {result.reverse_search && result.reverse_search.links && (
           <div style={{
             backgroundColor: "#FFFFFF",
@@ -124,7 +165,7 @@ function Analysis() {
             </p>
           </div>
         )}
- 
+
         {signals.c2pa && signals.c2pa.has_c2pa && signals.c2pa.raw_data && (
           <div style={{
             backgroundColor: "#FFFFFF",
@@ -153,10 +194,10 @@ function Analysis() {
             </pre>
           </div>
         )}
- 
+
       </div>
     </div>
   )
 }
- 
+
 export default Analysis
