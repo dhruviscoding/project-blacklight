@@ -12,3 +12,6 @@ backend/temp/
 *.tmp
 .DS_Store
 Thumbs.db
+
+backend/benchmark/ai/
+backend/benchmark/real/
