@@ -2,7 +2,8 @@ import pytesseract
 from PIL import Image
 import re
 
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+import os
+pytesseract.pytesseract.tesseract_cmd = os.getenv("TESSERACT_PATH", "tesseract")
 
 
 def analyze_ocr(file_path: str) -> dict:

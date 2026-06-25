@@ -1,5 +1,8 @@
 import exiftool
-exiftool.ExifToolHelper.executable = r"C:\Users\dhruv\AppData\Local\Programs\ExifTool\ExifTool.exe"
+import os
+
+exiftool_path = os.getenv("EXIFTOOL_PATH", "exiftool")
+
 from analyzers.metadata.gps_extractor import extract_gps
 from analyzers.metadata.timestamp_verifier import verify_timestamps
 from analyzers.metadata.tampering_detector import detect_tampering

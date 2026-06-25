@@ -5,6 +5,8 @@ import SignalBreakdown from '../components/SignalBreakdown'
 import MetadataPanel from '../components/MetadataPanel'
 import HashPanel from '../components/HashPanel'
 import ForensicVisuals from '../components/ForensicVisuals'
+import AudioAssessment from '../components/AudioAssessment'
+import AudioSignals from '../components/AudioSignals'
 
 function Analysis() {
   const location = useLocation()
@@ -61,6 +63,9 @@ function Analysis() {
   }
 
   const signals = result.signals || {}
+  const isAudio = mediaType === 'audio'
+  const isVideo = mediaType === 'video'
+  const isImage = mediaType === 'image'
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#FAFAF8" }}>
@@ -110,89 +115,134 @@ function Analysis() {
           </p>
         </div>
 
-        <VerdictCard verdict={result.verdict} />
-
-        <SignalBreakdown signals={signals} />
-
-        <ForensicVisuals
-          ela={signals.ela}
-          fft={signals.fft}
-          noise={signals.noise}
-        />
-
-        <MetadataPanel metadata={signals.metadata} />
-
-        <HashPanel hashes={signals.hashes} />
-
-        {result.reverse_search && result.reverse_search.links && (
-          <div style={{
-            backgroundColor: "#FFFFFF",
-            borderRadius: "8px",
-            border: "1px solid #E8E5E0",
-            padding: "24px",
-            marginBottom: "16px"
-          }}>
-            <h3 style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6563", marginBottom: "16px" }}>
-              Reverse Image Search
-            </h3>
-            <p style={{ fontSize: "13px", color: "#6B6563", marginBottom: "12px" }}>
-              Open in external search engines to verify image origin and earliest appearance.
-            </p>
-            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-              {Object.entries(result.reverse_search.links).map(([engine, url]) => (
-                <a
-                  key={engine}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    padding: "8px 16px",
-                    backgroundColor: "#F5F4F0",
-                    border: "1px solid #E8E5E0",
-                    borderRadius: "6px",
-                    fontSize: "13px",
-                    fontWeight: 500,
-                    color: "#1A1A1A",
-                    textDecoration: "none"
-                  }}
-                >
-                  {engine.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase())}
-                </a>
-              ))}
-            </div>
-            <p style={{ fontSize: "11px", color: "#6B6563", marginTop: "12px" }}>
-              Note: Links use a placeholder URL until cloud storage is configured. Full programmatic reverse search coming in Phase 2.
-            </p>
-          </div>
+        {/* Audio analysis */}
+        {isAudio && (
+          <>
+            <AudioAssessment assessment={result.forensic_assessment} />
+            <AudioSignals signals={signals} />
+            <HashPanel hashes={signals.hashes} />
+          </>
         )}
 
-        {signals.c2pa && signals.c2pa.has_c2pa && signals.c2pa.raw_data && (
-          <div style={{
-            backgroundColor: "#FFFFFF",
-            borderRadius: "8px",
-            border: "1px solid #E8E5E0",
-            padding: "24px",
-            marginBottom: "16px"
-          }}>
-            <h3 style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6563", marginBottom: "16px" }}>
-              C2PA Content Credentials
-            </h3>
-            <p style={{ fontSize: "13px", color: signals.c2pa.score === 0.95 ? "#DC2626" : "#16A34A", fontWeight: 600, marginBottom: "8px" }}>
-              {signals.c2pa.finding}
-            </p>
-            <pre style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "11px",
-              color: "#6B6563",
-              backgroundColor: "#F5F4F0",
-              padding: "12px",
-              borderRadius: "6px",
-              overflow: "auto",
-              maxHeight: "200px"
+        {/* Image analysis */}
+        {isImage && (
+          <>
+            <VerdictCard verdict={result.verdict} />
+            <SignalBreakdown signals={signals} />
+            <ForensicVisuals
+              ela={signals.ela}
+              fft={signals.fft}
+              noise={signals.noise}
+            />
+            <MetadataPanel metadata={signals.metadata} />
+            <HashPanel hashes={signals.hashes} />
+
+            {result.reverse_search && result.reverse_search.links && (
+              <div style={{
+                backgroundColor: "#FFFFFF",
+                borderRadius: "8px",
+                border: "1px solid #E8E5E0",
+                padding: "24px",
+                marginBottom: "16px"
+              }}>
+                <h3 style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6563", marginBottom: "16px" }}>
+                  Reverse Image Search
+                </h3>
+                <p style={{ fontSize: "13px", color: "#6B6563", marginBottom: "12px" }}>
+                  Open in external search engines to verify image origin and earliest appearance.
+                </p>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  {Object.entries(result.reverse_search.links).map(([engine, url]) => (
+                    <a
+                      key={engine}
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        padding: "8px 16px",
+                        backgroundColor: "#F5F4F0",
+                        border: "1px solid #E8E5E0",
+                        borderRadius: "6px",
+                        fontSize: "13px",
+                        fontWeight: 500,
+                        color: "#1A1A1A",
+                        textDecoration: "none"
+                      }}
+                    >
+                      {engine.replace(/_/g, " ").replace(/\b\w/g, l => l.toUpperCase())}
+                    </a>
+                  ))}
+                </div>
+                <p style={{ fontSize: "11px", color: "#6B6563", marginTop: "12px" }}>
+                  Note: Links use a placeholder URL until cloud storage is configured. Full programmatic reverse search coming in Phase 2.
+                </p>
+              </div>
+            )}
+
+            {signals.c2pa && signals.c2pa.has_c2pa && signals.c2pa.raw_data && (
+              <div style={{
+                backgroundColor: "#FFFFFF",
+                borderRadius: "8px",
+                border: "1px solid #E8E5E0",
+                padding: "24px",
+                marginBottom: "16px"
+              }}>
+                <h3 style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6563", marginBottom: "16px" }}>
+                  C2PA Content Credentials
+                </h3>
+                <p style={{ fontSize: "13px", color: signals.c2pa.score === 0.95 ? "#DC2626" : "#16A34A", fontWeight: 600, marginBottom: "8px" }}>
+                  {signals.c2pa.finding}
+                </p>
+                <pre style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "11px",
+                  color: "#6B6563",
+                  backgroundColor: "#F5F4F0",
+                  padding: "12px",
+                  borderRadius: "6px",
+                  overflow: "auto",
+                  maxHeight: "200px"
+                }}>
+                  {JSON.stringify(signals.c2pa.raw_data, null, 2)}
+                </pre>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Video analysis */}
+        {isVideo && (
+          <>
+            <VerdictCard verdict={result.verdict} />
+            <div style={{
+              backgroundColor: "#FFFFFF",
+              borderRadius: "8px",
+              border: "1px solid #E8E5E0",
+              padding: "24px",
+              marginBottom: "16px"
             }}>
-              {JSON.stringify(signals.c2pa.raw_data, null, 2)}
-            </pre>
-          </div>
+              <h3 style={{ fontSize: "13px", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6563", marginBottom: "16px" }}>
+                Video Details
+              </h3>
+              {result.video_metadata && (
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
+                  <tbody>
+                    {Object.entries(result.video_metadata).filter(([_, v]) => v).map(([key, value]) => (
+                      <tr key={key} style={{ borderBottom: "1px solid #F5F4F0" }}>
+                        <td style={{ padding: "6px 0", color: "#6B6563", width: "160px" }}>{key}</td>
+                        <td style={{ padding: "6px 0", fontFamily: "'JetBrains Mono', monospace", color: "#1A1A1A" }}>{String(value)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+              {result.verdict && (
+                <p style={{ marginTop: "12px", fontSize: "13px", color: "#6B6563" }}>
+                  {result.verdict.frames_analyzed} frames analyzed · {result.verdict.frames_flagged} flagged
+                </p>
+              )}
+            </div>
+          </>
         )}
 
       </div>
