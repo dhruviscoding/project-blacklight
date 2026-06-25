@@ -19,10 +19,10 @@ function Home() {
             fontSize: "36px", fontWeight: 700, color: "#1A1A1A",
             letterSpacing: "-0.5px", lineHeight: "1.2", marginBottom: "12px"
           }}>
-            AI-Generated Media<br />Forensics Platform
+            Digital Media<br />Forensics Platform
           </h1>
           <p style={{ fontSize: "16px", color: "#6B6563", lineHeight: "1.6", maxWidth: "480px" }}>
-            Multi-signal forensic analysis combining metadata extraction, frequency domain analysis, C2PA verification, and ML-based detection.
+            Investigative-grade forensic analysis of images, audio, and video. Metadata extraction, C2PA verification, frequency domain analysis, and ML-based detection.
           </p>
         </div>
  
